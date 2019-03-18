@@ -173,7 +173,7 @@
         },
         "ama-sdk": {
             "root": "projects/ama-sdk",
-            "sourceRoot": "projects/ama-sdk/src",
+            "sourceRoot": "projects/ama-sdk",
             "projectType": "library",
             "prefix": "amasdk",
             "architect": {

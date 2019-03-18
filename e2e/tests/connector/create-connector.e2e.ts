@@ -16,16 +16,9 @@
  */
 
 import { testConfig } from '../../test.config';
-import { LoginPage, LoginPageImplementation } from '../../pages/login.page';
-import { SidebarActionMenu } from '../../pages/sidebar.menu';
-import { CreateEntityDialog } from '../../pages/dialog/create-entity.dialog';
-import { ProjectContentPage } from '../../pages/project-content.page';
-import { SnackBar } from '../../pages/snackbar';
+import { LoginPage, LoginPageImplementation, AuthenticatedPage, SidebarActionMenu, CreateEntityDialog, ProjectContentPage, SnackBar, Toolbar } from 'ama-sdk';
 import { NodeEntry } from 'alfresco-js-api-node';
-import { Backend } from '../../api/api.interfaces';
-import { getBackend } from '../../api/helpers';
-import { AuthenticatedPage } from '../../pages/authenticated.page';
-import { Toolbar } from '../../pages/toolbar';
+import { Backend, getBackend } from 'ama-sdk';
 
 describe('Create connector', async () => {
     const adminUser = {

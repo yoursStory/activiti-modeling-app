@@ -16,7 +16,7 @@
  */
 
 import { ACMCrud } from '../acm-crud';
-import { ServiceParameterMapping, MappingsType } from 'ama-sdk';
+import { ServiceParameterMapping, MappingsType } from '../../../../src/lib/api/types';
 
 export class ACMProcess extends ACMCrud {
 
@@ -52,7 +52,7 @@ export class ACMProcess extends ACMCrud {
     }
 }
 
-export class ServiceParameterMappings {
+export class ServiceTaskParameterMappings {
     inputs: ServiceParameterMapping;
     outputs: ServiceParameterMapping;
 

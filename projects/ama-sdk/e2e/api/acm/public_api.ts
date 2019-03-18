@@ -15,18 +15,8 @@
  * limitations under the License.
  */
 
-import { testConfig } from '../test.config';
-import { GenericPage } from './common/generic.page';
-
-export class ProjectsPage extends GenericPage {
-
-    readonly appsPageURL = `${testConfig.ama.url}${testConfig.ama.port !== '' ? `:${testConfig.ama.port}` : ''}/dashboard/projects`;
-
-    constructor() {
-        super();
-    }
-
-    async navigateTo() {
-        return await super.navigateTo(this.appsPageURL);
-    }
-}
+export * from './acm-backend';
+export * from './acm-crud';
+export * from './e2e-request-api.helper';
+export * from './fakeBlob.helper';
+export * from './project';

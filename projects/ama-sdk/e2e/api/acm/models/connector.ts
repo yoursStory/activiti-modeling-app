@@ -32,7 +32,7 @@ export class ACMConnector extends ACMCrud {
     }
 }
 
-export class ConnectorParameter {
+export class ConnectorsParameter {
     id: string;
     name: string;
     description: string;
@@ -48,14 +48,14 @@ export class ConnectorParameter {
     }
 }
 
-export class ConnectorAction {
+export class ConnectorsAction {
     id: string;
     name: string;
     description?: string;
-    inputs?: ConnectorParameter[];
-    outputs?: ConnectorParameter[];
+    inputs?: ConnectorsParameter[];
+    outputs?: ConnectorsParameter[];
 
-    constructor(name: string, description?: string, inputs?: ConnectorParameter[], outputs?: ConnectorParameter[]) {
+    constructor(name: string, description?: string, inputs?: ConnectorsParameter[], outputs?: ConnectorsParameter[]) {
         this.id = uuidv4();
         this.name = name;
         this.description = description;

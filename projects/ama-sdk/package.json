@@ -16,5 +16,5 @@
         "@alfresco/adf-core": "3.1.0-beta4",
         "@alfresco/js-api": "3.1.0-beta4"
     },
-    "main": "src/public_api.ts"
+    "main": "./public_api.ts"
 }

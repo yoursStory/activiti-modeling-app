@@ -16,7 +16,7 @@
  */
 
 import * as AlfrescoApi from 'alfresco-js-api-node';
-import { Backend, ModelCrud, ProjectApi } from '../api.interfaces';
+import { Backend, ModelCrud, ProjectRestApi } from '../api.interfaces';
 import { browser } from 'protractor';
 import { TestConfig } from '../../test.config.interface';
 import { ACMProject } from './project';
@@ -33,7 +33,7 @@ import { ACMData } from './models/data';
 export class ACMBackend implements Backend {
 
     public api: AlfrescoApi;
-    public project: ProjectApi;
+    public project: ProjectRestApi;
     public process: ModelCrud;
     public connector: ModelCrud;
     public form: ModelCrud;

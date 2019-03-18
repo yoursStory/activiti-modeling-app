@@ -27,7 +27,7 @@ export interface ModelCrud {
     delete(modelId?: string): Promise<void>;
 }
 
-export interface ProjectApi {
+export interface ProjectRestApi {
     create(projectName?: string): Promise<AlfrescoApi.NodeEntry>;
     createAndWaitUntilAvailable(projectName?: string): Promise<AlfrescoApi.NodeEntry>;
     delete(projectId?: string): Promise<void>;
@@ -36,7 +36,7 @@ export interface ProjectApi {
 
 export interface Backend {
     api: AlfrescoApi;
-    project: ProjectApi;
+    project: ProjectRestApi;
     process: ModelCrud;
     connector: ModelCrud;
     ui: ModelCrud;

@@ -14,20 +14,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const uuidv4 = require('uuid/v4');
 
-export class EntityProperty {
-    id: string;
-    name: string;
-    type: string;
-    value: string;
-    required: boolean;
+export class UtilRandom {
 
-    constructor(name: string, type: string, value: string, required: boolean) {
-        this.id = uuidv4();
-        this.name = name;
-        this.type = type;
-        this.required = required;
-        this.value = value;
+    static generateString (strLength?: number, charSet?: string) {
+        const result = [];
+
+        strLength = strLength || 5;
+        charSet = charSet || 'BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz';
+
+        while (strLength--) {
+            result.push(charSet.charAt(Math.floor(Math.random() * charSet.length)));
+        }
+
+        return result.join('');
     }
 }

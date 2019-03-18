@@ -15,10 +15,23 @@
  * limitations under the License.
  */
 
-import { VariablesDialog } from './variables.dialog';
+const infoColor = '\x1b[36m%s\x1b[0m',
+    logColor = '\x1b[35m%s\x1b[0m',
+    warnColor = '\x1b[33m%s\x1b[0m',
+    errorColor = '\x1b[31m%s\x1b[0m';
 
-export class ProcessVariablesDialog extends VariablesDialog {
-    constructor() {
-        super('Process variables');
+/* tslint:disable:no-console */
+export class Logger {
+    static info(...messages): void  {
+        console.log(infoColor, messages.join(''));
+    }
+    static log(...messages): void  {
+        console.log(logColor, messages.join(''));
+    }
+    static warn(...messages): void  {
+        console.log(warnColor, messages.join(''));
+    }
+    static error(...messages): void  {
+        console.log(errorColor, messages.join(''));
     }
 }

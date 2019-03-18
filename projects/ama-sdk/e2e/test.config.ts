@@ -16,10 +16,7 @@
  */
 
 import { TestConfig } from './test.config.interface';
-import * as appConfig from '../src/app.config.json';
 require('dotenv').config();
-
-const apsConfig = <any>appConfig;
 
 const env = process.env;
 
@@ -33,14 +30,23 @@ export const testConfig: TestConfig = {
         url: env.E2E_HOST || 'http://localhost',
         port: env.E2E_PORT || '4100',
         backendConfig: {
-            authType: apsConfig.authType,
-            oauth2: apsConfig.oauth2,
-            bpmHost: apsConfig.bpmHost
+            authType: 'OAUTH',
+            oauth2: {
+                'host': 'http://localhost:4100/auth',
+                'clientId': 'activiti',
+                'scope': 'openid',
+                'secret': '',
+                'implicitFlow': true,
+                'silentLogin': false,
+                'redirectUri': '/',
+                'redirectUriLogout': '/login'
+            },
+            bpmHost: 'http://localhost:4100/api'
         },
         user: env.E2E_USERNAME,
         password: env.E2E_PASSWORD,
         unauthorized_user: env.E2E_UNAUTHORIZED_USER,
         unauthorized_user_password: env.E2E_UNAUTHORIZED_USER_PASSWORD,
-        appTitle: apsConfig.application.name
+        appTitle: 'Activiti Modeling Application'
     }
 };

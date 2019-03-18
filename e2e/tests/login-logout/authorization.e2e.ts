@@ -15,9 +15,7 @@
  * limitations under the License.
  */
 
-import { testConfig } from '../../test.config';
-import { LoginPage, LoginPageImplementation } from '../../pages/login.page';
-import { AuthenticatedPage } from '../../pages/authenticated.page';
+import { testConfig, LoginPage, LoginPageImplementation, AuthenticatedPage } from 'ama-sdk';
 
 describe('User Authorization', () => {
 

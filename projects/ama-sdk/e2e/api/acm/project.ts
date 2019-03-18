@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-import { ProjectApi } from '../api.interfaces';
+import { ProjectRestApi } from '../api.interfaces';
 import { NodeEntry, ResultSetPaging } from 'alfresco-js-api-node';
 import { UtilRandom } from '../../util/random';
 import { UtilApi } from '../../util/api';
@@ -23,7 +23,7 @@ import { ACMBackend } from './acm-backend';
 import { E2eRequestApiHelper } from './e2e-request-api.helper';
 import { Logger } from '../../util/logger';
 
-export class ACMProject implements ProjectApi {
+export class ACMProject implements ProjectRestApi {
 
     requestApiHelper: E2eRequestApiHelper;
     endPoint = '/v1/projects/';
