@@ -23,6 +23,7 @@ export const DATA_FILE_FORMAT = '.json';
 export const DECISION_TABLE_FILE_FORMAT = '.dmn';
 export const MODEL_NAME_CHARACTERS = 'a-zA-Z0-9_';
 export const CONNECTOR_NAME_REGEX = /^[a-z0-9]{0,26}$/;
+export const PROJECT_NAME_REGEX = /^[a-z0-9-]{0,26}$/;
 
 export const sanitizeString = (text: string) => {
     const pastedText = text,
@@ -38,7 +39,6 @@ export const createProcessName = (name) => {
 export const createDecisionTableName = (name) => {
     return sanitizeString(name.replace(DECISION_TABLE_FILE_FORMAT, ''));
 };
-
 
 export const changeFileName = (file: File, newName: string): File => {
     const blob = file.slice(0, file.size, file.type);
