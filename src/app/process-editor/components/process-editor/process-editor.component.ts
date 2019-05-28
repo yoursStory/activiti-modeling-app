@@ -60,6 +60,7 @@ export class ProcessEditorComponent implements OnInit {
     disableSave: boolean;
     tabNames = ['Diagram editor', 'XML editor', 'Extensions editor'];
     selectedTabIndex = 0;
+    extensionsSchema: string;
 
     constructor(
         private store: Store<AmaState>,
@@ -68,6 +69,7 @@ export class ProcessEditorComponent implements OnInit {
         private processLoaderService: ProcessDiagramLoaderService
     ) {
         this.vsTheme$ = this.getVsTheme();
+        this.extensionsSchema = 'extensionsSchema';
     }
 
     ngOnInit() {
